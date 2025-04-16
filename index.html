@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra Quando - Para Minha Mulher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Abra Quando...</h1>
+        </header>
+        <div class="progress" id="progress">0/4 envelopes abertos</div>
+        <div class="cards" id="cards">
+            <!-- Cards will be dynamically populated by JavaScript -->
+        </div>
+        <div>
+            <a href="#" class="reset-button" onclick="resetCards()">Recomeçar Cartinhas</a>
+        </div>
+    </div>
+
+    <div id="envelope-animation">
+        <img src="https://i.postimg.cc/kDxwHvkL/Picsart-25-04-13-10-48-44-000.png" alt="Envelope abrindo">
+    </div>
+
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" role="button" aria-label="Fechar">×</span>
+            <div class="paper">
+                <h2 id="modalTitle"></h2>
+                <p id="modalText"></p>
+                <div id="modalImages" class="collage"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="confirm-modal">
+        <div class="confirm-modal-content">
+            <h2>Confirmação</h2>
+            <p id="confirm-message"></p>
+            <div class="confirm-buttons">
+                <button class="confirm-button" onclick="confirmOpenCard()">Sim</button>
+                <button class="cancel-button" onclick="cancelOpenCard()">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcome-modal">
+        <div class="modal-content">
+            <h2>Para Minha hello Kitty bombada 💕</h2>
+            <p id="welcome-message">Estas cartinhas são um pedacinho do meu coração, para te fazer sorrir e sentir meu amor em cada momento.</p>
+            <button onclick="closeWelcomeModal()">Abrir Cartinhas</button>
+        </div>
+    </div>
+
+    <div id="final-modal">
+        <div class="modal-content">
+            <h2>Você Leu Tudo! 💖</h2>
+        <p>Meu amor, espero que essas cartinhas tenham te trazido alegria e carinho. Você é a pessoa mais especial da minha vida, e quero te fazer sorrir todos os dias. Te amo com todo meu coração!</p>
+            <button onclick="closeFinalModal()">Fechar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Feito com 💖 para você | Criado pelo seu vampirinho boboca🧛</p>
+    </footer>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
